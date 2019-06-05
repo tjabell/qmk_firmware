@@ -1,1 +1,2 @@
 SRC += muse.c
+POINTING_DEVICE_ENABLE = no
