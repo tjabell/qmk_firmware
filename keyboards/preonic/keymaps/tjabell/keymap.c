@@ -166,11 +166,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = LAYOUT_preonic_grid(
   //                                     H1                         H2
-                               KC_TILD, KC_1,     KC_2,    KC_3,     KC_4,    KC_5,    KC_6,      KC_7,    KC_8,    KC_9,    KC_0, KC_BSPC,
-                               KC_TILD, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,   KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
-                               MT(MOD_LCTL, KC_DEL)  , KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE,
-                               _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6, KC_BSLS, KC_MINS, KC_LBRC, KC_RBRC, MT(MOD_RSFT, KC_ENT),
-                               _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_LEFT, KC_DOWN, KC_RGHT
+                               KC_TILD, KC_1,     KC_2,    KC_3,     KC_4,      KC_5,    KC_6,     KC_7,    KC_8,    KC_9,    KC_0, KC_BSPC,
+                               KC_TILD, KC_F7,   KC_LBRC, KC_LCBR,   KC_LPRN,   KC_F11,  KC_F12,  KC_RPRN, KC_RCBR, KC_RBRC, KC_RPRN, KC_DEL,
+                               MOD_LCTL,KC_EXLM, KC_AT,   KC_HASH,  KC_DLR,  KC_PERC, KC_CIRC,  KC_UNDS,   KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE,
+                               _______, KC_F1,   KC_F2,   KC_F3,   KC_AMPR,    KC_F5,   KC_F6,  KC_BSLS, KC_MINS, KC_LBRC, KC_RBRC, MT(MOD_RSFT, KC_ENT),
+                               _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_LEFT, KC_DOWN,   KC_RGHT
                                ),
 
 /* Raise - Original
@@ -216,11 +216,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                ),
 /* Adjust (Lower + Raise)
  * ,-----------------------------------------------------------------------------------.
- * |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
+ * |Reset |DEBUG |      |Aud on|AudOff|AGnorm|AGswap|Qwerty|Colemk|Dvorak|      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      | Reset|      |      |      |      |      |      |      |      |      |  Del |
+ * |      |      |      |      |  F1  |      |      |  F12 |      |      |      |  Del |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |Aud on|AudOff|AGnorm|AGswap|Qwerty|Colemk|Dvorak|      |      |
+ * | LCTL |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 | RCTL |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |Voice-|Voice+|Mus on|MusOff|MidiOn|MidOff|      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -228,10 +228,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_ADJUST] = LAYOUT_preonic_grid(
-  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
-  _______, RESET,   DEBUG,   _______, _______, _______, _______, TERM_ON, TERM_OFF,_______, _______, KC_DEL,
-  _______, _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  COLEMAK, DVORAK,  _______, _______,
-  _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  _______, _______, _______, _______, _______,
+  RESET  , DEBUG  , MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  COLEMAK, DVORAK,  TERM_ON, TERM_OFF,
+  _______, _______, _______, _______, KC_F1, _______, _______,   KC_F12,  _______, _______, _______, KC_DEL,
+  KC_LCTL, KC_F2  , KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_RCTL,
+  _______, MUV_DE , MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 )
 
